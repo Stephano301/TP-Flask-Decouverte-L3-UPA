@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+{% block titre %}Ajouter une tâche{% endblock %}
+
+{% block contenu %}
+<h1>Nouvelle tâche</h1>
+
+{% if erreur %}
+    <p class="erreur">{{ erreur }}</p>
+{% endif %}
+
+<form method="post">
+    <label for="titre">Titre :</label>
+    <input
+        id="titre"
+        name="titre"
+        maxlength="80"
+        required
+        value="{{ titre }}"
+        placeholder="Ex. : Apprendre Flask"
+    >
+
+    <label for="priorite">Priorité :</label>
+    <select id="priorite" name="priorite">
+        <option value="basse"
+            {% if priorite == "basse" %}selected{% endif %}>
+            Basse
+        </option>
+        <option value="normale"
+            {% if priorite == "normale" %}selected{% endif %}>
+            Normale
+        </option>
+        <option value="haute"
+            {% if priorite == "haute" %}selected{% endif %}>
+            Haute
+        </option>
+    </select>
+
+    <button type="submit">Ajouter</button>
+</form>
+{% endblock %}

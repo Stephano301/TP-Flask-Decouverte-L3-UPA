@@ -1,0 +1,44 @@
+
+body {
+    font-family: sans-serif;
+    margin: 30px;
+    background: #f5f7fa;
+    color: #222;
+}
+
+nav {
+    padding: 15px;
+    background: #dce8f8;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+li {
+    margin: 12px 0;
+}
+
+input, select, button {
+    display: block;
+    margin: 8px 0 16px;
+    padding: 8px;
+}
+
+.message {
+    color: green;
+}
+
+.erreur {
+    color: red;
+    font-weight: bold;
+}
